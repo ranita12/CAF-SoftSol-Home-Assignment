@@ -22,5 +22,3 @@ Remove unwanted symbols and extra spaces
 Normalize capitalization
 
 Convert commonly used abbreviations into a standard form
-
-Ensure consistent suffix formatting (Pvt Ltd.)
