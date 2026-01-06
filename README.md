@@ -1,20 +1,26 @@
-def normalize_company_name(company_name: str) -> str:
-    """
-    Normalize company name to:
-    'CAF SoftSol India Pvt Ltd.'
-    """
+ Problem Statement
 
-    if not company_name or not company_name.strip():
-        return "Company Name Not Available"
+Company names may appear in various formats such as:
 
-    name = company_name.lower()
+CAF SoftSol India Private Limited
 
-    base_name = "CAF SoftSol"
+CAF SoftSol Pvt Ltd
 
-    # Check if India is present
-    india_part = " India" if "india" in name else ""
+CAF SoftSol India Pvt. Ltd
 
-    # Standard Pvt Ltd format
-    pvt_ltd_part = " Pvt Ltd."
+CAF SoftSol (India) Pvt Ltd
 
-    return f"{base_name}{india_part}{pvt_ltd_part}"
+The objective is to normalize all such variations into one standard format.
+
+✅ Standard Output Format
+CAF SoftSol India Pvt Ltd.
+
+🛠️ Solution Approach
+
+Remove unwanted symbols and extra spaces
+
+Normalize capitalization
+
+Convert commonly used abbreviations into a standard form
+
+Ensure consistent suffix formatting (Pvt Ltd.)
